@@ -13,26 +13,28 @@ var getInfo = function(name, phoneNum, street) {
 }
 
 //Removing Falsey Values
-//currently not working
+//Pure
 var removeFalsey = function(array) {
+	var keepTruth = []
 	for(var i=0; i<array.length; i++){
-		(array[i] === 0 || null || "" || undefined || NaN || false) ? 
-			array.splice(i, 1) :
-			console.log("Real Value"); 
-	}
-	return array
+		!!array[i] ? keepTruth.push(array[i]) : false
+	};
+	return keepTruth
+};
+
+//Non-Pure
+var falseyArray = ['dog', "", 0, 45, NaN, undefined, 'yes', false];
+var truthyArray = [];
+var falseyFunc = function () {
+	for(var i=0; i<falseyArray.length; i++){
+		!!falseyArray[i] ? truthyArray.push(falseyArray[i]) : false
+	};
 };
 
 
-//currently not working
-var falseyArray = ['dog', 45, 0, undefined, NaN];
-var falseyFunc = function() {
-	for(var i=0; i<falseyArray.length; i++) {
-		(falseyArray[i] === 0 || null || '' || undefined || NaN || false) ?
-			falseyArray.splice(i, 1) :
-			true;
-	}
-};
-console.log(falseyArray)
+
+
+
+
 
 

@@ -6,15 +6,15 @@ return (number === 1) ? word : (word + "s");
 //Functional getInfo
 var getInfo = function(name, phoneNum, street) {
 	var infoObj = {}
-	name = prompt("")
-	phoneNum = prompt("")
-	street = prompt("")
-	infoObj["name"] = name
-	infoObj["phone"] = phoneNum
-	infoObj["street"] = street
+	name = prompt("Please enter your name:")
+	phoneNum = prompt("Please enter your phone number:")
+	street = prompt("Please enter your street:")
+	infoObj.name = name
+	infoObj.phone = phoneNum
+	infoObj.street = street
 	return infoObj
 }
-var vicInfo = getIndo
+var vicInfo = getInfo()
 
 
 

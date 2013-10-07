@@ -4,11 +4,11 @@ return (number === 1) ? word : (word + "s");
 };
 
 //Functional getInfo
-var getInfo = function(name, phoneNum, street) {
+var getInfo = function() {
 	var infoObj = {}
-	name = prompt("Please enter your name:")
-	phoneNum = prompt("Please enter your phone number:")
-	street = prompt("Please enter your street:")
+	var name = prompt("Please enter your name:")
+	var phoneNum = prompt("Please enter your phone number:")
+	var street = prompt("Please enter your street:")
 	infoObj.name = name
 	infoObj.phone = phoneNum
 	infoObj.street = street
